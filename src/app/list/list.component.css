@@ -1,0 +1,16 @@
+.lista{
+    width: 99%;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    background-color: #D2E69C;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
