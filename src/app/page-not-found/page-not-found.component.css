@@ -1,0 +1,21 @@
+/*.titulo{
+    font-size: 33px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}*/
+
+.texto{
+    font-size: 25px;
+}
+
+.PageNotFound{
+    background-color: #f15858;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 480px;
+    height: auto;
+}
