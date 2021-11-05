@@ -9,6 +9,7 @@ import { VistasComponent } from './vistas/vistas.component';
 import { ListComponent } from './list/list.component';
 import { TableComponent } from './table/table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
