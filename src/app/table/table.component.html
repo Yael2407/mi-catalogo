@@ -3,10 +3,8 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">ID</th>
             <th scope="col">Marca</th>
             <th scope="col">Submarca</th>
-            <th scope="col">Modelo</th>
             <th scope="col">Descripción</th>
             <th></th>
             <th></th>
@@ -14,7 +12,6 @@
         </thead>
         <tbody>
         <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize">
-            <th scope="row">{{ auto.id }}</th>
             <td>{{ auto.marca }}</td>
             <td>{{ auto.submarca }}</td>
             <td>{{ auto.descripcion }}</td>
