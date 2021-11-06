@@ -1,9 +1,10 @@
 
-<div class="contenido" *ngFor='let auto of autos'>
-    <div class="lista">       
-            <img src="/assets/Imagenes/Ojo.png" alt="" (click)="openModal(auto, content)"> 
-            <p>{{auto.descripcion}}</p>
+<div class="contenido">
+    <div class="lista" *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize">   
+        <i class="fas fa-eye" (click)="openModal(auto, content)"></i>
+        <p>{{auto.descripcion}}</p>
     </div>
+    <ngb-pagination class="d-flex justify-content-center" [collectionSize]="collectionSize" [pageSize]="pageSize" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="ngOnInit()"></ngb-pagination>
 </div>
 
 
@@ -24,14 +25,9 @@
                 <span class="field">Submarca: </span> <span class="value">{{ autoSeleccionado.submarca }}</span>
             </li>
             <li class="list-group-item">
-                <span class="field">Modelo: </span> <span class="value">{{ autoSeleccionado.modelos }}</span>
-            </li>
-            <li class="list-group-item">
                 <span class="field">Descripción: </span> <span class="value">{{ autoSeleccionado.descripcion }}</span>
-            </li>
-            <li class="list-group-item">
-                <span class="field">Fecha de Registro: </span> <span class="value">{{ autoSeleccionado.fecha_registro }}</span>
             </li>
         </ul>
     </div>
 </ng-template>
+

@@ -11,6 +11,9 @@ import { AutosService } from '../Servicios/autos.service';
 export class ListComponent implements OnInit {
   autos: Automovil[] = [];
   autoSeleccionado?: Automovil;
+  page=1;
+  pageSize=15;
+  collectionSize=this.autos.length;
 
   constructor(private modalService: NgbModal, private autoService: AutosService) { }
 
