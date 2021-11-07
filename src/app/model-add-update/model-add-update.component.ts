@@ -8,12 +8,26 @@ import { Automovil } from '../models';
   styleUrls: ['./model-add-update.component.css']
 })
 export class ModelAddUpdateComponent implements OnInit {
+  minValor: number = 2000;
+  maxValor: number = 2022;
+ 
   accion?: string;
-  auto?: Automovil;
+  auto: Automovil = {} as Automovil;
 
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {
+  }
+
+  close(): void{
+    let modelos: string[] = [];
+
+    for (let i=this.minValor; i<= this.maxValor; i++) {
+      modelos.push(i.toString());
+    }
+
+    this.auto.modelos=modelos;
+    this.activeModal.close(this.auto);
   }
 
 }

@@ -1,8 +1,12 @@
 
 <div>
+    <div class="boton">
+        <div class="btn btn-black" style="margin: auto;" (click)="openModalAdd()" >Agregar Auto <i class="fas fa-plus-circle"></i></div>
+    </div>
     <table class="table">
         <thead>
         <tr>
+            <th scope="col">Id</th>
             <th scope="col">Marca</th>
             <th scope="col">Submarca</th>
             <th scope="col">Descripción</th>
@@ -12,11 +16,12 @@
         </thead>
         <tbody>
         <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize">
+            <td>{{ auto._id }}</td>
             <td>{{ auto.marca }}</td>
             <td>{{ auto.submarca }}</td>
             <td>{{ auto.descripcion }}</td>
             <td><i class="far fa-edit" (click)="openModalEdit(auto)"></i></td>
-            <td><i class="far fa-trash-alt"></i></td>
+            <td><i class="far fa-trash-alt" (click)="openModalDelete(auto)"></i></td>
         </tr>
         </tbody>
     </table>

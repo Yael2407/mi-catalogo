@@ -11,6 +11,8 @@ import { TableComponent } from './table/table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModelAddUpdateComponent } from './model-add-update/model-add-update.component';
+import { ModelDeleteComponent } from './model-delete/model-delete.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { ModelAddUpdateComponent } from './model-add-update/model-add-update.com
     ListComponent,
     TableComponent,
     PageNotFoundComponent,
-    ModelAddUpdateComponent
+    ModelAddUpdateComponent,
+    ModelDeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
